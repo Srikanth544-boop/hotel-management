@@ -34,6 +34,13 @@ public class Hotel {
 
     // Allocate a room to a guest
     public void allocateRoom(Booking booking) {
+        // Check for duplicate booking ID
+for (Booking b : bookings) {
+    if (b.getBookingId() == booking.getBookingId()) {
+        System.out.println("Booking ID already exists!");
+        return;
+    }
+}
 
         Room room = booking.getRoom();
 
