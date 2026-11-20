@@ -49,9 +49,13 @@ public class Main {
 sc.nextLine();
 String name = sc.nextLine();
 
-                    System.out.print("Enter Phone Number: ");
-                    String phone = sc.next();
+                   System.out.print("Enter Phone Number: ");
+String phone = sc.next();
 
+if (!phone.matches("[6-9][0-9]{9}")) {
+    System.out.println("Invalid phone number! Enter a valid 10-digit mobile number.");
+    break;
+}
                     System.out.print("Enter Room Number: ");
                     int roomNo = sc.nextInt();
 
