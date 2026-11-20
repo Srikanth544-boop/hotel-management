@@ -46,7 +46,8 @@ public class Main {
                     int guestId = sc.nextInt();
 
                     System.out.print("Enter Guest Name: ");
-                    String name = sc.next();
+sc.nextLine();
+String name = sc.nextLine();
 
                     System.out.print("Enter Phone Number: ");
                     String phone = sc.next();
