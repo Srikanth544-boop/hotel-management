@@ -41,6 +41,15 @@ for (Booking b : bookings) {
         return;
     }
 }
+// Check for duplicate guest ID
+for (Booking b : bookings) {
+    if (b.getGuest().getGuestId() ==
+        booking.getGuest().getGuestId()) {
+
+        System.out.println("Guest ID already exists!");
+        return;
+    }
+}
 
         Room room = booking.getRoom();
 
