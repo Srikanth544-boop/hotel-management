@@ -73,11 +73,17 @@ if (!phone.matches("[6-9][0-9]{9}")) {
                         break;
                     }
 
-                    System.out.print("Enter Check-in Date (YYYY-MM-DD): ");
-                    LocalDate inDate = LocalDate.parse(sc.next());
+                   System.out.print("Enter Check-in Date (YYYY-MM-DD): ");
+LocalDate inDate = LocalDate.parse(sc.next());
 
-                    System.out.print("Enter Check-out Date (YYYY-MM-DD): ");
-                    LocalDate outDate = LocalDate.parse(sc.next());
+if (inDate.isBefore(LocalDate.now())) {
+    System.out.println("Check-in date cannot be in the past!");
+    break;
+}
+
+System.out.print("Enter Check-out Date (YYYY-MM-DD): ");
+LocalDate outDate = LocalDate.parse(sc.next());
+
 
                     Guest guest = new Guest(guestId, name, phone);
 
