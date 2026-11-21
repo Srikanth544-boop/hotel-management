@@ -83,6 +83,10 @@ if (inDate.isBefore(LocalDate.now())) {
 
 System.out.print("Enter Check-out Date (YYYY-MM-DD): ");
 LocalDate outDate = LocalDate.parse(sc.next());
+if (!outDate.isAfter(inDate)) {
+    System.out.println("Check-out date must be after check-in date!");
+    break;
+}
 
 
                     Guest guest = new Guest(guestId, name, phone);
